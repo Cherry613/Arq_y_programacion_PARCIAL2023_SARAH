@@ -7,7 +7,7 @@ const monumentoSchema = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
-    codigo_postal: { type: Number, required: true },
+    codigo_postal: { type: String, required: true },
     iso: { type: String, required: true}
   },
   { timestamps: true }
