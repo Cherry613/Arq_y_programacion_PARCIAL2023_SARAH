@@ -1,16 +1,19 @@
-export enum RAZAS {
-    Humanos = "Humanos",
-    Elfos = "Elfos",
-    Enanos = "Enanos",
-    Hobbits = "Hobbits",
-    Ents = "Ents",
+export type Product = {
+    name: string;
+    stock: number;
+    description: string;
+    price: number;
+  };
+
+export type Client = {
+    name: string;
+    cif: string;
 }
 
-export type Personaje = {
-    //id: string;
-    name: string;
-    raza: string;
-    description: string;
-    skills: string;
-    //raza: RAZAS
-  };
+export type Invoice = {
+    client: string; //id de mongo
+    products: Product[]; 
+    total: number;
+}
+
+
