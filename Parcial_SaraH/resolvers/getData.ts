@@ -7,7 +7,7 @@ type Data = {
 }
 
 export const getData =async (ciudad: string): Promise<Data> => {  
-    const BASE_URL = "http://api.weatherapi.com/v1";        
+    const BASE_URL = "http://api.weatherapi.com/v1";       
     const API_KEY = "69de3a91bd4a47f8aea92140230610";
     const url = `${BASE_URL}/current.json?key=${API_KEY}&q=${ciudad}&aqi=no`;
     const data = await fetch(url);

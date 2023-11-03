@@ -14,7 +14,7 @@ const getMonumentosid = async (req: Request, res: Response) => {
         res.status(404).send("not found")
     }
     else{
-     // const datos = await getData(monumento.codigo_postal);
+      const datos = await getData(monumento.codigo_postal);
       res.status(200).send({
         id:monumento._id.toString(),
         name: monumento.name,
